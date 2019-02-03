@@ -2,6 +2,9 @@ import sys
 import pandas as pd
 import re
 
+import pickle
+import nltk
+
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem.wordnet import WordNetLemmatizer
@@ -15,7 +18,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report
 from sklearn.multioutput import MultiOutputClassifier
 
-import pickle as pk
+nltk.download('stopwords')
 
 
 def load_data(database_filepath):
@@ -67,7 +70,7 @@ def build_model():
         'vect__ngram_range': ((1, 1), (1, 2)),
         'vect__max_df': (0.5, 0.75, 1.0),
         'tfidf__use_idf': (True, False),
-        'clf__estimator__n_estimators': [20, 40],
+        'clf__estimator__n_estimators': [20, 50, 40],
     }
 
     cv = GridSearchCV(pipeline, param_grid=parameters)
@@ -96,7 +99,8 @@ def save_model(model, model_filepath):
     :param model_filepath: filepath to save trained model
     :return: None
     """
-    pk.dump(model, model_filepath)
+    with open(model_filepath, 'wb') as f:  # Pickle file is newly created where foo1.py is
+        pickle.dump(model, f, -1)          # dump data to f
 
 
 def main():
@@ -128,4 +132,5 @@ def main():
 
 
 if __name__ == '__main__':
+    # python train_classifier.py ../data/DisasterResponse.db classifier.pkl
     main()
