@@ -27,11 +27,11 @@ def load_data(database_filepath):
         X - pandas dataframe (predictor)
         y - pandas dataframe ( response)
     """
-    engine = create_engine('sqlite:///{}.db'.format(database_filepath))
+    engine = create_engine('sqlite:///{}'.format(database_filepath))
     df = pd.read_sql('SELECT * FROM Response', engine)
     x = df['message']
     y = df.iloc[:, 4:]
-    return x, y
+    return x, y, y.columns
 
 
 def tokenize(text):
@@ -85,11 +85,17 @@ def evaluate_model(model, x_test, y_test, category_names):
     :return:None
     """
     y_pred = model.predict(x_test)
-    for i, column in enumerate(y_test.columns):
+    for i, column in enumerate(category_names):
         print(classification_report(y_test[column], y_pred[:, i]))
 
 
 def save_model(model, model_filepath):
+    """
+    Dumps trained model to model_filepath
+    :param model: trained model
+    :param model_filepath: filepath to save trained model
+    :return: None
+    """
     pk.dump(model, model_filepath)
 
 
