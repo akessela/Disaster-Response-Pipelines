@@ -104,6 +104,6 @@ venv.bak/
 .mypy_cache/
 
 
-../.idea/
-../EDA-notebooks/
-DisasterResponse.db
+.idea/
+EDA-notebooks/
+data/DisasterResponse.db
