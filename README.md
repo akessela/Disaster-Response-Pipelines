@@ -1,5 +1,7 @@
 # Disaster Response Pipeline Project
-
+Create  a machine learning pipeline to categorize real messages send during disaster events.
+Pipeline is used to categorize these events so that messages can be sent to an appropriate disaster
+relief agency.
 
 ### Table of Contents
 
@@ -8,7 +10,7 @@
 3. [Results](#results)
 4. [Licensing, Authors, and Acknowledgements](#licensing)
 
-### Quick start
+### 1. Quick start
 
 ---
 1. Run the following commands in the project's root directory to set up your database and model.
@@ -24,7 +26,7 @@
 3. Go to http://0.0.0.0:3001/
 
 
-### What's included <a name="files"></a>
+### 2. What's included <a name="files"></a>
 
 ---
 ```
@@ -47,3 +49,14 @@ Disaster-Response-Pipelines/
 └── utilities/
     └── print_file_structure.py
 ```
+
+### 3. Results
+
+### 4. Licensing, Authors, and Acknowledgements <a name='licensing'></a>
+
+Must give credit to [Figure-eight](https://www.figure-eight.com/) for the data and   
+[Udacity](https://www.udacity.com/courses/all) for creating a beautiful learning experience.  
+Find the Licensing for the data and other descriptive information from [Figure-eight]
+(https://www.figure-eight.com/).
+
+
