@@ -56,6 +56,6 @@ Disaster-Response-Pipelines/
 Must give credit to [Figure-eight](https://www.figure-eight.com/) for the data and   
 [Udacity](https://www.udacity.com/courses/all) for creating a beautiful learning experience.  
 Find the Licensing for the data and other descriptive information from [Figure-eight]
-(https://www.figure-eight.com/).
+(https://www.figure-eight.com/dataset/combined-disaster-response-data/).
 
 
