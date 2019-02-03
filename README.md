@@ -1,29 +1,30 @@
 # Disaster Response Pipeline Project
 Create  a machine learning pipeline to categorize real messages send during disaster events.
 Pipeline is used to categorize these events so that messages can be sent to an appropriate disaster
-relief agency.
+relief agency. This project includes a web app where an emergency worker can input
+a new message and get classification results in several categories. The web app will aso
+display visualizations of the data.
 
 ### Table of Contents
 
 1. [Quick start](#start)
 2. [What's included](#files)
-3. [Results](#results)
-4. [Licensing, Authors, and Acknowledgements](#licensing)
+3. [Licensing, Authors, and Acknowledgements](#licensing)
 
 ### 1. Quick start
 
 ---
-1. Run the following commands in the project's root directory to set up your database and model.
+1.1. Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database
         `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
     - To run ML pipeline that trains classifier and saves
         `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
 
-2. Run the following command in the app's directory to run your web app.
+1.2. Run the following command in the app's directory to run your web app.
     `python run.py`
 
-3. Go to http://0.0.0.0:3001/
+1.3. Go to http://0.0.0.0:3001/
 
 
 ### 2. What's included <a name="files"></a>
@@ -50,10 +51,8 @@ Disaster-Response-Pipelines/
     └── print_file_structure.py
 ```
 
-### 3. Results
-
-### 4. Licensing, Authors, and Acknowledgements <a name='licensing'></a>
-
+### 3. Licensing, Authors, and Acknowledgements <a name='licensing'></a>
+---
 Must give credit to [Figure-eight](https://www.figure-eight.com/) for the data and   
 [Udacity](https://www.udacity.com/courses/all) for creating a beautiful learning experience.  
 Find the Licensing for the data and other descriptive information from [Figure-eight]
