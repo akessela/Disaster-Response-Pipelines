@@ -1,7 +1,6 @@
 import sys
 import pandas as pd
 import re
-import numpy as np
 
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
